@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;300&display=swap'); */
+
+
+*, 
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --background-color: #f7f6f6;
+    --color-bgdark: #fafcfc;
+    --color-bgligth: #040408;
+    --color-primary: #040112;
+    --color-primary-darker: #02010d;
+    --color-accent-primary: rgb(238, 195, 54);
+    --color-accent-secondary: rgb(250, 162, 68);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.wrapper{
+    background-color: var(--background-color);
+    font-size: 1rem;
+    width: 100vw;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 88%;
+    margin: 0 8%;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-primary);
+    width: 100%;
+    height: 100vh;
+    color: var(--color-bgdark);
+    font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+}
+
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--color-primary-darker);
+    box-shadow: 0px 2px 20px rgba(100, 100, 100, 0.1);    
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+    align-items: center;
+    padding: 8px 32px;
+}
+
+.navbar .navbar__brand{
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    place-content: center center;
+    place-items: center center;
+    gap: 2vw;
+}
+
+
+.navbar .navbar__brand .brand__name{
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-weight: 300;
+    font-family: 'KoHo', monospace!important;
+}
+
+.brand__logo{
+    width: 48px;
+    height: 48px;
+    border: solid 1px white;
+    border-radius: 24px;
+}
+
+.navbar .navbar__menu{
+    display: flex;
+    gap: 0.8vw;
+    padding: 16px 8px;
+    list-style: none;
+    align-items: baseline;
+    font-size: 2vw;
+}
+
+.nav__link a{
+    text-decoration: none;
+    color: var(--color-bgdark);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-style: 'Code';
+}
+
+.nav__link a:hover{
+    background: var(--color-accent-primary);
+    color: var(--color-bgligth);
+}
+
+.link-active{
+    color: var(--color-accent-primary);
+    font-weight: 680;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0 auto;
+    padding: 16px 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6vw;
+}
+
+.hero__heading{
+    font-size: 4em;
+    text-transform: uppercase;
+    align-self: center;
+    color: var(--color-accent-primary);
+}
+
+.hero__subheading{
+    font-size: 1.8em;
+    color: rgb(149, 149, 149);
+    align-self: baseline;
+}
+
+.hero__description{
+    font-family: monospace;
+    font-style: italic;
+}
+
+.section__content{
+    display: flex;
+    width: 80%;
+    height: 80%;
+    padding: 4vh 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__me{
+    display: grid;
+    place-items: center center;
+    height: 100vh;
+    font-size: 4vw;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--color-primary-darker);
+    color: white;
+    padding: 36px 8px;
+}
+
+.footer .social{
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer a{
+    text-decoration: none;
+    color: var(--color-accent-secondary);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .header{
+        gap: 8vh;
+        height: 90vh;
+    }
+
+    .navbar-wrapper {
+        display: grid;
+        place-items: center center;
+    }  
+
+    .navbar{
+        margin: 0;
+        padding: 8px 16px;
+        width: min-content;
+        justify-content: center;
+    }
+
+    .navbar .navbar__brand .brand__name{
+        font-size: 8vw;
+        line-height: 0.8;
+        letter-spacing: 4px;
+        font-family: monospace;
+    }
+
+    .navbar .navbar__brand .brand__logo{ width: 36px; height: 36px; border-radius: 18px;}
+
+    .navbar .navbar__menu{
+        padding: 16px 8px;
+        font-size: 0.8rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav__link a{
+        text-decoration: none;
+        color: var(--color-bgdark);
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-style: 'Code';
+        background: rgb(25, 28, 44);
+    }
+
+    .hero{ font-size: 1.4em; }
+    .hero__heading{ font-size: 3.2em; }
+    .hero__subheading{ font-size: 1.2em;}
+
+    .footer .social{ flex-direction: column; align-items: center; gap: 2vh; }
+}
