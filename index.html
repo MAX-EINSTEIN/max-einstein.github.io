@@ -11,11 +11,24 @@
     <meta name="description"
       content="A Full Stack Django + React Developer with experience in technolgies like Python, PyQt, C++, The Qt Framework, Android + Java/Kotlin + Firebase, Unreal Engine Fundamentals. I have fun by writing poetry, articles and also by participating in competitive programming contests.">
 
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/main.css">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
 
+    <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/0d1414939c.js" crossorigin="anonymous"></script>
   </head>
 
@@ -31,9 +44,9 @@
             </div>
             <ul class="navbar__menu">
               <li class="nav__link link-active"><a href="#"> Home </a></li>
-              <li class="nav__link"><a href="https://medium.com/@max-einstein"> Blog </a></li>
+              <li class="nav__link"><a href="#"> Skills </a></li>
               <li class="nav__link"><a href="#"> Portfolio </a></li>
-              <li class="nav__link"><a href="#"> Tools </a></li>
+              <li class="nav__link"><a href="https://medium.com/@max-einstein" target="_blank"> Blog </a></li>
               <li class="nav__link"><a href="#"> Contact </a></li>
             </ul>
           </nav>
@@ -53,15 +66,83 @@
       </header>
 
       <main>
-        <section class="about__me flex-container">
-          <div class="section__content">
-            About Me!
+        <section class="about">
+          <div class="about__card">
+            <div class="card__image">
+              <img src="assets/images/junaid.jpg" alt="Junaid Siddiqui's Picture" loading="lazy" decoding="async">
+            </div>
+            <div class="card__content">
+              <div class="content__heading">
+                About Me!
+              </div>
+              <div class="content__description">
+                Hi! I'm Junaid Siddiqui.<br><br>
+                or Max Einstein on most online platforms<br><br>
+                I am a student at <a href="https://ipec.org.in" target="_blank">Inderprastha Engineering College (IPEC),
+                  Ghaziabad</a> pursuing <span class="course">B.Tech.</span> in <span class="branch">Computer Science
+                  and Engineering.</span><br><br>
+                I like to develop applications that are both fun and useful. I build my projects with clean
+                architecture using <span class="git"><i class="fab fa-git-alt fa-sm"></i> git</span> for version control
+                and
+                <a class="github" href="https://github.com/MAX-EINSTEIN" target="_blank"><i
+                    class="fab fa-github fa-sm"></i> github</a>
+                for collaboration.
+              </div>
+              <div class="content__buttons">
+                <div class="btn btn--gradient-pink">Resume <i class="fas fa-file-download"></i></div>
+                <div class="btn btn--gradient-purple">Hire Me! <i class="fas fa-envelope-open-text"></i></div>
+              </div>
+            </div>
           </div>
+        </section>
+
+        <section class="skills">
+          <div class="skills__card">
+            <div class="skills__card__heading">My Skills</div>
+            <div class="skills__card__grid">
+              <div class="skill">
+                <img src="assets/images/icons8-python-144.png" alt="logo" class="skill__icon">
+                <div class="skill__name">Python</div>
+              </div>
+              <div class="skill">
+                <img src="assets/images/icons8-django-100.png" alt="logo" class="skill__icon">
+                <div class="skill__name">Django</div>
+              </div>
+              <div class="skill">
+                <img src="assets/images/icons8-react.svg" alt="logo" class="skill__icon">
+                <div class="skill__name">React</div>
+              </div>
+              <div class="skill">
+                <img src="assets/images/icons8-sass.svg" alt="logo" class="skill__icon">
+                <div class="skill__name">Sass</div>
+              </div>
+              <div class="skill">
+                <img src="assets/images/icons8-android-os.svg" alt="logo" class="skill__icon">
+                <div class="skill__name">Android</div>
+              </div>
+              <div class="skill">
+                <img src="assets/images/icons8-c++-144.png" alt="logo" class="skill__icon">
+                <div class="skill__name">C++</div>
+              </div>
+              <div class="skill">
+                <img src="assets/images/icons8-qt.svg" alt="logo" class="skill__icon">
+                <div class="skill__name">Qt</div>
+              </div>
+              <div class="skill">
+                <img src="assets/images/icons8-unreal-engine.svg" alt="logo" class="skill__icon">
+                <div class="skill__name">UE 4</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="portfolio">
+          <div class="portfolio__heading">Portfolio</div>
         </section>
       </main>
 
       <footer class="footer">
-        <div class="copyright">&copy; 2021</div>
+        <div class="copyright">&copy; 2021 Junaid Siddiqui</div>
         <div class="social">
           <div>
             Get in touch with <strong> me </strong> on
