@@ -66,6 +66,7 @@ body {
   align-self: center;
   align-items: center;
   padding: 8px 32px;
+  font-size: 1.5rem;
 }
 .navbar .navbar__brand {
   display: grid;
@@ -92,22 +93,23 @@ body {
   padding: 16px 8px;
   list-style: none;
   align-items: baseline;
-  font-size: 2vw;
+  font-size: 1.6rem;
 }
 .navbar .navbar__menu .nav__link a {
   text-decoration: none;
   color: #fafcfc;
   padding: 4px 12px;
   border-radius: 4px;
-  font-style: "Code";
+  font-weight: 500;
+  font-family: "KoHo", sans-serif;
+  text-transform: uppercase;
+  backface-visibility: hidden;
 }
 .navbar .navbar__menu .nav__link a:hover {
   background: #eec336;
-  color: #fafcfc;
-}
-.navbar .navbar__menu .link-active {
-  color: #eec336;
-  font-weight: 680;
+  color: #02010d;
+  font-weight: 700;
+  font-family: "KoHo", sans-serif;
 }
 @media only screen and (max-width: 800px) {
   .navbar {
@@ -117,13 +119,13 @@ body {
     justify-content: center;
   }
   .navbar .navbar__brand {
-    gap: 20px;
+    justify-content: space-evenly;
   }
   .navbar .navbar__brand .brand__logo {
     width: 36px;
     height: 36px;
     border-radius: 18px;
-    padding-right: 0 !important;
+    padding: 0 0;
   }
   .navbar .navbar__brand .brand__name {
     font-size: 8vw;
@@ -132,17 +134,22 @@ body {
   }
   .navbar .navbar__menu {
     padding: 16px 8px;
-    font-size: 0.68rem;
+    font-size: 1rem;
     width: 100%;
-    justify-content: space-between;
+    gap: 0.5rem;
+    justify-content: space-evenly;
   }
   .navbar .navbar__menu .nav__link a {
     text-decoration: none;
     color: #fafcfc;
-    padding: 2px 8px !important;
-    border-radius: 2px;
-    font-style: "Code";
+    padding: 0.2rem 0.8rem !important;
+    border-radius: 4px;
+    font-size: 0.88em;
     background: #191c2c;
+  }
+  .navbar .navbar__menu .nav__link a:hover {
+    background-color: transparent;
+    color: #fafcfc;
   }
 }
 
@@ -176,6 +183,9 @@ body {
     height: fit-content;
     margin: auto 0;
     padding: 8vh 0;
+    width: min-content;
+    align-items: center;
+    align-content: center;
   }
   .hero__heading {
     font-size: 3.2em;
@@ -206,16 +216,13 @@ body {
   height: fit-content;
 }
 .about__card .card__image {
-  flex: 3;
-  outline-offset: 8px;
-  outline: #fafcfc groove 4px;
+  flex: 4;
 }
 .about__card .card__image img {
   width: 100%;
   height: 100%;
-  border: groove #fafcfc 4px;
-  transform: scale(0.96);
   background-color: #02010d;
+  border-radius: 8px;
 }
 .about__card .card__image img:hover {
   transform: scale(1.1);
@@ -227,7 +234,7 @@ body {
   padding: 18vh 2vw;
   margin: 0 auto;
   font-size: 1em;
-  flex: 5;
+  flex: 6;
   gap: 2vw;
   font-size: 1em;
   padding: 0.25em 1em;
@@ -242,6 +249,8 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  object-fit: cover;
+  font-family: "Roboto", sans-serif;
 }
 .about__card .card__content .content__description {
   font-size: 0.6em;
@@ -352,20 +361,26 @@ body {
   }
   .about__card .card__image {
     flex: 1 1 100%;
-    outline-offset: 0;
-    outline: none;
-    padding: 2rem 2rem;
+    padding: 1rem 0.5rem;
   }
   .about__card .card__image img {
     width: 100%;
-    border-radius: 50% 50%;
-    border: none;
+    border-radius: 1rem;
+    border: 2px groove white;
     transform: scale(1);
     background-color: #02010d;
   }
   .about__card .card__content {
     flex: 1 1 100%;
     padding: 0 !important;
+    text-align: justify;
+  }
+  .about__card .card__content .content__buttons {
+    padding: 1rem 0;
+  }
+  .about__card .card__content .content__buttons .btn {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
   }
 }
 
@@ -386,7 +401,7 @@ body {
   padding: 18vh 2vw;
   margin: 0 auto;
   font-size: 1em;
-  gap: 12vh;
+  gap: 8vh;
   padding: 8vh 0;
   min-height: 100vh;
   justify-content: flex-start;
@@ -394,13 +409,13 @@ body {
 .skills__card__heading {
   font-size: 2em;
   text-align: center;
-  text-transform: uppercase;
-  font-family: "Merriweather";
   font-weight: 900;
   background: -webkit-linear-gradient(#23c2ff, #572985);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  object-fit: cover;
+  font-family: "Roboto", sans-serif;
 }
 .skills__card__grid {
   width: 100%;
@@ -423,6 +438,7 @@ body {
   text-decoration: none;
   color: inherit;
   font-size: 0.8em;
+  transform: scale(0.8);
 }
 .skills__card__grid .skill__icon {
   width: 120px;
@@ -445,12 +461,18 @@ body {
   transform: translate(-3%, -6%);
 }
 .skills__card__grid .skill:hover__icon {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .skills__card__grid .skill:hover__name {
-  transform: scale(1.8);
+  transform: scale(1.6);
 }
 @media only screen and (max-width: 768px) {
+  .skills__card {
+    gap: 4vh;
+  }
+  .skills__card__heading {
+    font-size: 1.25em;
+  }
   .skills__card__grid {
     width: 100%;
     height: fit-content;
@@ -461,7 +483,13 @@ body {
     justify-items: center;
   }
   .skills__card__grid .skill {
-    pointer-events: none;
+    width: 100%;
+  }
+  .skills__card__grid .skill:hover {
+    all: unset !important;
+  }
+  .skills__card__grid .skill:hover > * {
+    transform: none;
   }
 }
 
@@ -483,9 +511,15 @@ body {
   margin: 0 auto;
   font-size: 1em;
   align-content: flex-start;
-  gap: 4vh;
+  gap: 8vh;
   width: 100%;
   padding: 4vh 6vw;
+}
+@media only screen and (max-width: 768px) {
+  .portfolio__card {
+    gap: 6vh;
+    padding: 6vh 6vw;
+  }
 }
 .portfolio__card__heading {
   align-self: center;
@@ -498,61 +532,61 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  object-fit: cover;
+  font-family: "Roboto", sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .portfolio__card__heading {
+    font-size: 1.6em !important;
+  }
 }
 .portfolio__card__grid {
-  min-height: 116vh;
   height: fit-content;
   font-size: 1em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 4;
   place-content: center center;
+  gap: 2.2rem;
+  row-gap: 2.2rem;
+  transition: 1s ease-in-out;
 }
 .portfolio__card__grid .project {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 220px;
+  grid-template-columns: repeat(2, 1fr) 12rem;
   grid-template-rows: 3;
   place-items: center center;
   place-content: center center;
-  gap: 16px;
-  row-gap: 24px;
-  border: 1px solid #7035ac;
-  border-radius: 6px 6px;
-  margin: 16px 16px;
-  padding: 16px 16px;
+  border: 0.5rem solid #040112;
+  border-radius: 0.8rem 0.8rem;
+  padding: 0.5rem 0.5rem;
   background: #02010d;
 }
 .portfolio__card__grid .project__image {
   grid-column: 3/4;
   grid-row: 1/3;
   display: inline-block;
-  width: 12.5rem;
-  height: 10.5rem;
+  width: 12rem;
+  height: 10rem;
   padding: 10px 8px;
+  transform: translateX(10%);
 }
 .portfolio__card__grid .project .webflix {
-  padding-left: 2rem;
-  padding-top: 1.2rem;
-  transform: scale(0.88);
+  transform: scale(0.72) translateX(10%);
+}
+.portfolio__card__grid .project .autopilot {
+  transform: scale(0.8) translateX(12%);
 }
 .portfolio__card__grid .project .key-insight {
   width: 10.8rem;
   height: 8.8rem;
-  padding-left: 2rem;
-  padding-top: 1.5rem;
-  transform: scale(1.2);
+  transform: scale(0.92) translateX(10%);
 }
-.portfolio__card__grid .project .arachnet {
-  padding-left: 2rem;
-  padding-top: 1.2rem;
-  transform: scaleX(0.88);
-}
+.portfolio__card__grid .project .arachnet,
 .portfolio__card__grid .project .interweb {
-  padding-left: 1rem;
-  padding-top: 1rem;
-  width: 12rem;
-  height: 12rem;
-  transform: scale(0.85) translateX(5%);
+  width: 10rem;
+  height: 10rem;
+  transform: scale(0.85) translateX(15%);
 }
 .portfolio__card__grid .project .details {
   grid-column: 1/3;
@@ -584,6 +618,8 @@ body {
   font-weight: 600;
   font-size: 1rem;
   grid-area: "options";
+  padding: 0 0.5em;
+  padding-bottom: 0.5em;
 }
 .portfolio__card__grid .project .options-list .languages {
   list-style: none;
@@ -604,8 +640,9 @@ body {
   font-size: 0.8em;
 }
 .portfolio__card__grid .project .options-list .button-group .btn {
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.2rem;
+  text-decoration: none;
 }
 .portfolio__card__grid .project .options-list .button-group .btn--gradient-purple {
   background-image: linear-gradient(to right, #4776e6 0%, #8e54e9 51%, #4776e6 100%);
@@ -639,10 +676,76 @@ body {
     transform: scale(1.08) translate(-4%, -4%);
   }
 }
+.portfolio__card__grid .project:hover {
+  transform: translateY(-4%);
+  box-shadow: 0.32rem 0.36rem 0.5rem black;
+}
 @media only screen and (max-width: 1080px) {
   .portfolio__card__grid {
     grid-template-columns: 1fr;
     grid-template-rows: 8;
+    row-gap: 1rem;
+  }
+  .portfolio__card__grid .project {
+    grid-template-columns: repeat(2, 1fr) 6.8rem;
+    border: 0.1rem solid #040112;
+    border-radius: 0.68rem 0.68rem;
+    padding: 0.5rem 0.5rem;
+    box-shadow: 0.32rem 0.36rem 0.5rem #0a0510;
+  }
+  .portfolio__card__grid .project__image {
+    width: 6.8rem;
+    height: 6rem;
+    transform: translateX(1%);
+  }
+  .portfolio__card__grid .project .webflix {
+    transform: scale(0.72) translateX(4%);
+  }
+  .portfolio__card__grid .project .autopilot {
+    transform: scale(0.88) translateX(1%);
+  }
+  .portfolio__card__grid .project .key-insight {
+    width: 6.8rem;
+    height: 6rem;
+    transform: scaleY(0.88) translateX(2%);
+  }
+  .portfolio__card__grid .project .arachnet,
+.portfolio__card__grid .project .interweb {
+    width: 6rem;
+    height: 6rem;
+    transform: scale(0.88) translateX(4%);
+  }
+  .portfolio__card__grid .project .details {
+    font-size: 0.92rem;
+    padding: 0 0.25em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .portfolio__card__grid .project .details .title {
+    font-size: 1.6em;
+  }
+  .portfolio__card__grid .project .details .description {
+    font-size: 0.68em;
+  }
+  .portfolio__card__grid .project .options-list {
+    font-size: 1rem;
+    padding: 0.25em 0.25em;
+    padding-bottom: 0.5em;
+  }
+  .portfolio__card__grid .project .options-list .languages {
+    gap: 0.2em;
+    font-size: 0.6em;
+  }
+  .portfolio__card__grid .project .options-list .languages li {
+    background: #464665;
+    padding: 0.1em 0.2em;
+    border-radius: 0.2rem;
+  }
+  .portfolio__card__grid .project .options-list .button-group .btn {
+    padding: 0.15rem 0.2rem;
+    border-radius: 0.2rem;
+    font-size: 0.8em;
   }
 }
 
@@ -658,21 +761,21 @@ body {
 }
 .footer .social {
   display: flex;
-  gap: 1vw;
-  flex-wrap: wrap;
+  gap: 4vw;
   justify-content: center;
   justify-items: center;
 }
 .footer a {
   text-decoration: none;
-  color: #7035ac;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
-@media only screen and (max-width: 800px) {
-  .footer .social {
-    flex-direction: column;
-    align-items: center;
-    gap: 2vh;
-  }
+.footer a i {
+  background-color: whitesmoke;
+  width: fit-content;
+  padding: 0.06rem 0.2rem;
+  border-radius: 0.32rem;
 }
 
 /*# sourceMappingURL=main.css.map */
