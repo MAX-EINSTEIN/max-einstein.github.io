@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Portfolio - Junaid Siddiqui</title>
 
@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap"
       rel="stylesheet">
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,500;0,600;0,700,0:900;1,400;1,500;1,600;1,700;1,900;&display=swap"
       rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap" rel="stylesheet">
@@ -69,7 +69,7 @@
         <section class="about">
           <div class="about__card">
             <div class="card__image">
-              <img src="assets/images/junaid.jpg" alt="Junaid Siddiqui's Picture" loading="lazy" decoding="async">
+              <img src="assets/images/max-einstein.png" alt="Junaid Siddiqui's Picture" loading="lazy" decoding="async">
             </div>
             <div class="card__content">
               <div class="content__heading">
@@ -84,8 +84,8 @@
                 I like to develop applications that are both fun and useful. I build my projects with clean
                 architecture using <span class="git"><i class="fab fa-git-alt fa-sm"></i> git</span> for version control
                 and
-                <a class="github" href="https://github.com/MAX-EINSTEIN" target="_blank"><i
-                    class="fab fa-github fa-sm"></i> github</a>
+                <pre><a class="github" href="https://github.com/MAX-EINSTEIN" target="_blank"><i
+                    class="fab fa-github fa-sm"></i> github</a></pre>
                 for collaboration.
               </div>
               <div class="content__buttons">
@@ -100,36 +100,39 @@
           <div class="skills__card">
             <div class="skills__card__heading">My Skills</div>
             <div class="skills__card__grid">
-              <div class="skill">
-                <img src="assets/images/icons8-python-144.png" alt="logo" class="skill__icon">
+              <a class="skill" href="https://github.com/MAX-EINSTEIN?tab=repositories&type=source&language=python"
+                target="_blank">
+                <img src="assets/images/skills/icons8-python.svg" alt="logo" class="skill__icon">
                 <div class="skill__name">Python</div>
-              </div>
+              </a>
               <div class="skill">
-                <img src="assets/images/icons8-django-100.png" alt="logo" class="skill__icon">
+                <img src="assets/images/skills/icons8-django.svg" alt="logo" class="skill__icon">
                 <div class="skill__name">Django</div>
               </div>
               <div class="skill">
-                <img src="assets/images/icons8-react.svg" alt="logo" class="skill__icon">
-                <div class="skill__name">React</div>
+                <img src="assets/images/skills/frontend.png" alt="logo" class="skill__icon">
+                <div class="skill__name" style="letter-spacing: 0; font-size: 0.92em; transform: translateY(20%);">
+                  HTML, CSS, JS
+                </div>
               </div>
               <div class="skill">
-                <img src="assets/images/icons8-sass.svg" alt="logo" class="skill__icon">
+                <img src="assets/images/skills/icons8-sass.svg" alt="logo" class="skill__icon">
                 <div class="skill__name">Sass</div>
               </div>
               <div class="skill">
-                <img src="assets/images/icons8-android-os.svg" alt="logo" class="skill__icon">
+                <img src="assets/images/skills/icons8-android-os.svg" alt="logo" class="skill__icon">
                 <div class="skill__name">Android</div>
               </div>
               <div class="skill">
-                <img src="assets/images/icons8-c++-144.png" alt="logo" class="skill__icon">
+                <img src="assets/images/skills/icons8-c++.svg" alt="logo" class="skill__icon">
                 <div class="skill__name">C++</div>
               </div>
               <div class="skill">
-                <img src="assets/images/icons8-qt.svg" alt="logo" class="skill__icon">
+                <img src="assets/images/skills/icons8-qt.svg" alt="logo" class="skill__icon">
                 <div class="skill__name">Qt</div>
               </div>
               <div class="skill">
-                <img src="assets/images/icons8-unreal-engine.svg" alt="logo" class="skill__icon">
+                <img src="assets/images/skills/icons8-unreal-engine.svg" alt="logo" class="skill__icon">
                 <div class="skill__name">UE 4</div>
               </div>
             </div>
@@ -137,7 +140,197 @@
         </section>
 
         <section class="portfolio">
-          <div class="portfolio__heading">Portfolio</div>
+          <div class="portfolio__card">
+            <div class="portfolio__card__heading">Portfolio</div>
+            <div class="portfolio__card__grid">
+              <div class="project">
+                <img class="project__image" src="assets/images/projects/icons8-harry-potter.svg" alt="project image"
+                  loading="lazy" decoding="async">
+
+                <div class="details">
+                  <div class="title">Diagon Alley</div>
+                  <div class="description">An ecommerce application for the diagon alley market from the magical world
+                    of Harry Potter. Now, you can buy magical items from the comfort of your homes.</div>
+                </div>
+                <div class="options-list">
+                  <ul class="languages">
+                    <li class="language">Python</li>
+                    <li class="language">Django</li>
+                    <li class="language">Bootstrap 4</li>
+                  </ul>
+                  <div class="button-group">
+                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/diagon-alley"
+                      target="_blank">Github <i class="fab fa-github fa-sm"></i></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project">
+                <img class="project__image webflix" src="assets/images/projects/iconfinder-webflix.svg"
+                  alt="project image" loading="lazy" decoding="async">
+
+                <div class="details">
+                  <div class="title">WEBFLIX</div>
+                  <div class="description">Webflix presents you a curated collection of TV shows from multiple sources.
+                    It's the Netflix for the unrecognized but fun web series.</div>
+                </div>
+                <div class="options-list">
+                  <ul class="languages">
+                    <li class="language">Python</li>
+                    <li class="language">Django</li>
+                    <li class="language">HTML</li>
+                    <li class="language">Sass</li>
+                    <li class="language">JS</li>
+                  </ul>
+                  <div class="button-group">
+                    <a class="btn btn--gradient-pink" href="https://webflix.pythonanywhere.com/" target="_blank">Demo <i
+                        class="fas fa-external-link-alt fa-sm"></i></a>
+                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/webflix/"
+                      target="_blank">Github <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project">
+                <img class="project__image" src="assets/images/projects/icons8-music.svg" alt="project image"
+                  loading="lazy" decoding="async">
+
+                <div class="details">
+                  <div class="title">Max Music</div>
+                  <div class="description">Miss the old days of keeping song media files? Max Music
+                    is here for the rescue, it can download songs from youtube using your youtube or spotify playlists.
+                  </div>
+                </div>
+                <div class="options-list">
+                  <ul class="languages">
+                    <li class="language">Python</li>
+                    <li class="language">PyQt5</li>
+                    <li class="language">The Qt Framework</li>
+                  </ul>
+                  <div class="button-group">
+                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/max-music"
+                      target="_blank">Github <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project">
+                <img class="project__image" src="assets/images/projects/icons8-auto-sms.svg" alt="project image"
+                  loading="lazy" decoding="async">
+
+                <div class="details">
+                  <div class="title">Files Autopilot</div>
+                  <div class="description">A Python application that automatically manages files
+                    (classifies/operate/move, and more) whenever a change is detected in any of the watched folders.
+                  </div>
+                </div>
+                <div class="options-list">
+                  <ul class="languages">
+                    <li class="language">Python</li>
+                    <li class="language">Async</li>
+                  </ul>
+                  <div class="button-group">
+                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/files-autopilot"
+                      target="_blank">Github <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project">
+                <img class="project__image key-insight" src="assets/images/projects/iconfinder_keylogger.svg"
+                  alt="project image" loading="lazy" decoding="async">
+
+                <div class="details">
+                  <div class="title">The Key Insight</div>
+                  <div class="description">It's a keylogger - tracks everything you type and stores the data into files
+                    encrypted using base64 encoding with salt encryption.</div>
+                </div>
+                <div class="options-list">
+                  <ul class="languages">
+                    <li class="language">C++</li>
+                    <li class="language">Base 64 encoding</li>
+                    <li class="language">Salt Encryption</li>
+                  </ul>
+                  <div class="button-group">
+                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/TheKeyInsight"
+                      target="_blank">Github <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project">
+                <img class="project__image arachnet" src="assets/images/projects/iconfinder_web.svg" alt="project image"
+                  loading="lazy" decoding="async">
+
+                <div class="details">
+                  <div class="title">Arachnet</div>
+                  <div class="description">Arachnet - Crawls all internal links on a website and applies page ranking
+                    algorithms to generate a graph visualization using D3.js</div>
+                </div>
+                <div class="options-list">
+                  <ul class="languages">
+                    <li class="language">Python</li>
+                    <li class="language">Sqlite</li>
+                    <li class="language">d3.js</li>
+                  </ul>
+                  <div class="button-group">
+                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/Arachnet"
+                      target="_blank">Github <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project">
+                <img class="project__image interweb" src="assets/images/projects/interweb.png" alt="project image"
+                  loading="lazy" decoding="async">
+
+                <div class="details">
+                  <div class="title">Inter Web</div>
+                  <div class="description">An android app to collect and showcase events. It helps to keep track of your
+                    life's most important moments and connect with more people with easier event management.</div>
+                </div>
+                <div class="options-list">
+                  <ul class="languages">
+                    <li class="language">Android</li>
+                    <li class="language">Java</li>
+                    <li class="language">Firebase</li>
+                    <li class="language">MVVM</li>
+                  </ul>
+                  <div class="button-group">
+                    <a class="btn btn--gradient-pink">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                    <a class="btn btn--gradient-purple">Github <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+
+              </div>
+              <div class="project">
+                <img class="project__image" src="assets/images/projects/icons8-unreal-engine.svg" alt="project image"
+                  loading="lazy" decoding="async">
+
+                <div class="details">
+                  <div class="title">Break the loop</div>
+                  <div class="description">You are stuck in a recursive maze jail made for containing a single time
+                    traveller. Everything feels like Deja-Vu, the jail is a time loop. Can you break the loop?</div>
+                </div>
+                <div class="options-list">
+                  <ul class="languages">
+                    <li class="language">C++</li>
+                    <li class="language">Unreal Engine 4</li>
+                  </ul>
+                  <div class="button-group">
+                    <a class="btn btn--gradient-pink">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                    <a class="btn btn--gradient-purple">Github <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 

@@ -12,7 +12,7 @@ body {
 }
 
 .wrapper {
-  background-color: #e2e0e6;
+  background-color: #12121a;
   font-size: 1rem;
   width: 100vw;
 }
@@ -28,13 +28,19 @@ body {
 .header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  place-items: center center;
+  place-content: center center;
   background: #040112;
   width: 100%;
   height: 100vh;
   color: #fafcfc;
   font-family: "Source Code Pro", Arial, Helvetica, sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    justify-content: space-around;
+    height: 80vh;
+  }
 }
 
 .navbar-wrapper {
@@ -45,6 +51,12 @@ body {
   box-shadow: 0px 2px 20px rgba(100, 100, 100, 0.1);
   width: 100%;
   z-index: 9999;
+}
+@media only screen and (max-width: 800px) {
+  .navbar-wrapper {
+    display: grid;
+    place-items: center center;
+  }
 }
 
 .navbar {
@@ -91,21 +103,57 @@ body {
 }
 .navbar .navbar__menu .nav__link a:hover {
   background: #eec336;
-  color: #040408;
+  color: #fafcfc;
 }
 .navbar .navbar__menu .link-active {
   color: #eec336;
   font-weight: 680;
+}
+@media only screen and (max-width: 800px) {
+  .navbar {
+    margin: 0;
+    padding: 8px 8px;
+    width: 98%;
+    justify-content: center;
+  }
+  .navbar .navbar__brand {
+    gap: 20px;
+  }
+  .navbar .navbar__brand .brand__logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    padding-right: 0 !important;
+  }
+  .navbar .navbar__brand .brand__name {
+    font-size: 8vw;
+    letter-spacing: 4px;
+    font-family: monospace;
+  }
+  .navbar .navbar__menu {
+    padding: 16px 8px;
+    font-size: 0.68rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navbar .navbar__menu .nav__link a {
+    text-decoration: none;
+    color: #fafcfc;
+    padding: 2px 8px !important;
+    border-radius: 2px;
+    font-style: "Code";
+    background: #191c2c;
+  }
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  margin: 0 auto;
-  padding: 16px 8px;
+  padding: 1rem;
   font-family: "Roboto", sans-serif;
   font-size: 1.6vw;
+  width: fit-content;
 }
 .hero__heading {
   font-size: 4em;
@@ -122,17 +170,30 @@ body {
   font-family: monospace;
   font-style: italic;
 }
+@media only screen and (max-width: 800px) {
+  .hero {
+    font-size: 1.2em;
+    height: fit-content;
+    margin: auto 0;
+    padding: 8vh 0;
+  }
+  .hero__heading {
+    font-size: 3.2em;
+  }
+  .hero__subheading {
+    font-size: 1.2em;
+  }
+}
 
 .about {
   display: flex;
   width: 100vw;
-  min-height: 100vh;
   align-items: center;
   align-content: center;
   font-family: "Roboto", sans-serif;
-  background: #e2e0e6;
-  color: #040408;
-  font-size: 2rem;
+  background: #12121a;
+  color: #fafcfc;
+  font-size: 2.2rem;
   min-height: 100vh;
 }
 .about__card {
@@ -141,19 +202,20 @@ body {
   width: 80vw;
   padding: 18vh 2vw;
   margin: 0 auto;
+  font-size: 1em;
   height: fit-content;
-  font-size: 36px;
 }
 .about__card .card__image {
   flex: 3;
   outline-offset: 8px;
-  outline: #02010d groove 4px;
+  outline: #fafcfc groove 4px;
 }
 .about__card .card__image img {
   width: 100%;
   height: 100%;
-  border: groove #02010d 4px;
+  border: groove #fafcfc 4px;
   transform: scale(0.96);
+  background-color: #02010d;
 }
 .about__card .card__image img:hover {
   transform: scale(1.1);
@@ -164,6 +226,7 @@ body {
   width: 80vw;
   padding: 18vh 2vw;
   margin: 0 auto;
+  font-size: 1em;
   flex: 5;
   gap: 2vw;
   font-size: 1em;
@@ -175,7 +238,7 @@ body {
   font-size: 2.6em;
   font-weight: 700;
   font-family: "Roboto", sans-serif;
-  background: -webkit-linear-gradient(#02010d, #3d1d5e);
+  background: -webkit-linear-gradient(#ff7b00, #7035ac);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -186,18 +249,20 @@ body {
   font-family: "KoHo", monospace;
 }
 .about__card .card__content .content__description a {
-  color: #094386;
+  display: inline-flexbox;
+  color: #244f80;
   font-style: italic;
   font-weight: 700;
   text-decoration: none;
   padding: 0 4px;
   transition: 0.5s ease-in;
+  background-color: #fafcfc;
 }
 @media only screen and (min-width: 768px) {
   .about__card .card__content .content__description a:hover {
     text-decoration: none;
     background-color: #7035ac;
-    color: #fef8f0;
+    color: #f7ede3;
     transform: scale(1.1);
   }
 }
@@ -205,7 +270,6 @@ body {
   font-weight: 600;
 }
 .about__card .card__content .content__description .branch {
-  color: #31174b;
   font-style: italic;
   font-weight: 700;
 }
@@ -214,7 +278,8 @@ body {
   font-weight: 600;
 }
 .about__card .card__content .content__description .github {
-  color: #040408;
+  display: inline-flexbox;
+  color: #040112;
   font-style: italic;
   font-weight: 700;
   text-decoration: none;
@@ -271,17 +336,48 @@ body {
     transform: scale(1.08) translate(-4%, -4%);
   }
 }
+@media only screen and (max-width: 800px) {
+  .about {
+    width: 100vw;
+    min-height: fit-content;
+    height: fit-content;
+    padding: 8vh 8vw;
+  }
+  .about__card {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    font-size: 18px;
+    padding: 0 !important;
+  }
+  .about__card .card__image {
+    flex: 1 1 100%;
+    outline-offset: 0;
+    outline: none;
+    padding: 2rem 2rem;
+  }
+  .about__card .card__image img {
+    width: 100%;
+    border-radius: 50% 50%;
+    border: none;
+    transform: scale(1);
+    background-color: #02010d;
+  }
+  .about__card .card__content {
+    flex: 1 1 100%;
+    padding: 0 !important;
+  }
+}
 
 .skills {
   display: flex;
   width: 100vw;
-  min-height: 100vh;
   align-items: center;
   align-content: center;
   font-family: "Roboto", sans-serif;
   background: #040112;
   color: #fafcfc;
-  font-size: 2rem;
+  font-size: 2.2rem;
 }
 .skills__card {
   display: flex;
@@ -289,6 +385,7 @@ body {
   width: 80vw;
   padding: 18vh 2vw;
   margin: 0 auto;
+  font-size: 1em;
   gap: 12vh;
   padding: 8vh 0;
   min-height: 100vh;
@@ -315,7 +412,7 @@ body {
   justify-items: center;
 }
 .skills__card__grid .skill {
-  width: 100%;
+  width: 92%;
   display: flex;
   flex-direction: column;
   gap: 2vh;
@@ -323,6 +420,9 @@ body {
   align-items: center;
   height: fit-content;
   padding: 0.5em 1em;
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.8em;
 }
 .skills__card__grid .skill__icon {
   width: 120px;
@@ -332,7 +432,7 @@ body {
   text-align: center;
   letter-spacing: 4px;
   font-weight: 500;
-  font-family: "KoHo", monospace;
+  font-family: "Source Code Pro", monospace;
 }
 .skills__card__grid .skill:hover {
   color: #23c2ff;
@@ -348,8 +448,7 @@ body {
   transform: scale(1.5);
 }
 .skills__card__grid .skill:hover__name {
-  transform: scale(1.6);
-  font-weight: 900;
+  transform: scale(1.8);
 }
 @media only screen and (max-width: 768px) {
   .skills__card__grid {
@@ -369,13 +468,182 @@ body {
 .portfolio {
   display: flex;
   width: 100vw;
-  min-height: 100vh;
   align-items: center;
   align-content: center;
   font-family: "Roboto", sans-serif;
-  background: #e2e0e6;
-  color: #040408;
-  font-size: 2rem;
+  background: #12121a;
+  color: #fafcfc;
+  font-size: 2.2rem;
+}
+.portfolio__card {
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  padding: 18vh 2vw;
+  margin: 0 auto;
+  font-size: 1em;
+  align-content: flex-start;
+  gap: 4vh;
+  width: 100%;
+  padding: 4vh 6vw;
+}
+.portfolio__card__heading {
+  align-self: center;
+  width: fit-content;
+  font-size: 2.6em;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  background: linear-gradient(#dc4883, #006aff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.portfolio__card__grid {
+  min-height: 116vh;
+  height: fit-content;
+  font-size: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 4;
+  place-content: center center;
+}
+.portfolio__card__grid .project {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 220px;
+  grid-template-rows: 3;
+  place-items: center center;
+  place-content: center center;
+  gap: 16px;
+  row-gap: 24px;
+  border: 1px solid #7035ac;
+  border-radius: 6px 6px;
+  margin: 16px 16px;
+  padding: 16px 16px;
+  background: #02010d;
+}
+.portfolio__card__grid .project__image {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  display: inline-block;
+  width: 12.5rem;
+  height: 10.5rem;
+  padding: 10px 8px;
+}
+.portfolio__card__grid .project .webflix {
+  padding-left: 2rem;
+  padding-top: 1.2rem;
+  transform: scale(0.88);
+}
+.portfolio__card__grid .project .key-insight {
+  width: 10.8rem;
+  height: 8.8rem;
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+  transform: scale(1.2);
+}
+.portfolio__card__grid .project .arachnet {
+  padding-left: 2rem;
+  padding-top: 1.2rem;
+  transform: scaleX(0.88);
+}
+.portfolio__card__grid .project .interweb {
+  padding-left: 1rem;
+  padding-top: 1rem;
+  width: 12rem;
+  height: 12rem;
+  transform: scale(0.85) translateX(5%);
+}
+.portfolio__card__grid .project .details {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  grid-area: "details";
+  font-size: 1rem;
+  padding: 1em 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.portfolio__card__grid .project .details .title {
+  font-size: 2em;
+  font-weight: 700;
+  font-family: "KoHo", monospace;
+}
+.portfolio__card__grid .project .details .description {
+  font-size: 0.88em;
+  font-weight: 500;
+  font-family: "Source Code Pro", sans-serif;
+}
+.portfolio__card__grid .project .options-list {
+  grid-column: 1/-1;
+  grid-row: 3/4;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+  grid-area: "options";
+}
+.portfolio__card__grid .project .options-list .languages {
+  list-style: none;
+  display: flex;
+  gap: 0.4em;
+  width: fit-content;
+  font-size: 0.8em;
+}
+.portfolio__card__grid .project .options-list .languages li {
+  background: #3c3c56;
+  padding: 0.1em 0.4em;
+  border-radius: 2px;
+}
+.portfolio__card__grid .project .options-list .button-group {
+  display: flex;
+  gap: 0.6em;
+  width: fit-content;
+  font-size: 0.8em;
+}
+.portfolio__card__grid .project .options-list .button-group .btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+.portfolio__card__grid .project .options-list .button-group .btn--gradient-purple {
+  background-image: linear-gradient(to right, #4776e6 0%, #8e54e9 51%, #4776e6 100%);
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fafcfc;
+  box-shadow: 2px 2px 8px #222222ee;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio__card__grid .project .options-list .button-group .btn--gradient-purple:hover {
+    background-position: right center;
+    text-decoration: none;
+    transform: scale(1.08) translate(-4%, -4%);
+  }
+}
+.portfolio__card__grid .project .options-list .button-group .btn--gradient-pink {
+  background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #fafcfc;
+  box-shadow: 2px 2px 8px #222222ee;
+  display: block;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio__card__grid .project .options-list .button-group .btn--gradient-pink:hover {
+    background-position: right center;
+    text-decoration: none;
+    transform: scale(1.08) translate(-4%, -4%);
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .portfolio__card__grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 8;
+  }
 }
 
 .footer {
@@ -399,87 +667,7 @@ body {
   text-decoration: none;
   color: #7035ac;
 }
-
-@media only screen and (max-width: 768px) {
-  .header {
-    gap: 8vh;
-    height: 90vh;
-  }
-
-  .navbar-wrapper {
-    display: grid;
-    place-items: center center;
-  }
-
-  .navbar {
-    margin: 0;
-    padding: 8px 8px;
-    width: 98%;
-    justify-content: center;
-  }
-  .navbar .navbar__brand {
-    gap: 20px;
-  }
-  .navbar .navbar__brand .brand__logo {
-    width: 36px;
-    height: 36px;
-    border-radius: 18px;
-    padding-right: 0 !important;
-  }
-  .navbar .navbar__brand .brand__name {
-    font-size: 8vw;
-    letter-spacing: 4px;
-    font-family: monospace;
-  }
-  .navbar .navbar__menu {
-    padding: 16px 8px;
-    font-size: 0.68rem;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .navbar .navbar__menu .nav__link a {
-    text-decoration: none;
-    color: #fafcfc;
-    padding: 2px 8px !important;
-    border-radius: 2px;
-    font-style: "Code";
-    background: #191c2c;
-  }
-
-  .hero {
-    font-size: 1.4em;
-  }
-  .hero__heading {
-    font-size: 3.2em;
-  }
-  .hero__subheading {
-    font-size: 1.2em;
-  }
-
-  .about {
-    width: 100vw;
-    height: fit-content;
-    padding: 4vh 8vw;
-  }
-  .about__card {
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    font-size: 18px;
-    padding: 0 !important;
-  }
-  .about__card .card__image {
-    flex: 1 1 100%;
-  }
-  .about__card .card__image img {
-    width: 100%;
-    border-radius: 4px;
-  }
-  .about__card .card__content {
-    flex: 1 1 100%;
-    padding: 0 !important;
-  }
-
+@media only screen and (max-width: 800px) {
   .footer .social {
     flex-direction: column;
     align-items: center;
