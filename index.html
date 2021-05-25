@@ -64,21 +64,21 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="navbar-wrapper">
-          <nav class="navbar">
-            <div class="navbar__brand">
-              <img class="brand__logo" src="assets/images/max-einstein.png" alt="max-einstein" loading="lazy"
-                decoding="async">
-              <pre class="brand__name">MAX-EINSTEIN</pre>
-            </div>
-            <ul class="navbar__menu">
-              <li class="nav__link link-active"><a href="#"> Home </a></li>
-              <li class="nav__link"><a href="#"> Skills </a></li>
-              <li class="nav__link"><a href="#"> Portfolio </a></li>
-              <li class="nav__link"><a href="https://medium.com/@max-einstein" target="_blank"> Blog </a></li>
-            </ul>
-          </nav>
-        </div>
+        <!-- <div class="navbar-wrapper"> -->
+        <nav class="navbar">
+          <div class="navbar__brand">
+            <img class="brand__logo" src="assets/images/max-einstein.png" alt="max-einstein" loading="lazy"
+              decoding="async">
+            <pre class="brand__name">MAX-EINSTEIN</pre>
+          </div>
+          <ul class="navbar__menu">
+            <li class="nav__link link-active"><a href="#"> Home </a></li>
+            <li class="nav__link"><a href="#skills"> Skills </a></li>
+            <li class="nav__link"><a href="#portfolio"> Portfolio </a></li>
+            <li class="nav__link"><a href="https://medium.com/@max-einstein" target="_blank"> Blog </a></li>
+          </ul>
+        </nav>
+        <!-- </div> -->
         <div class="flex-container">
           <div class="hero">
             <div class="hero__subheading">Hello, I am</div>
@@ -94,7 +94,7 @@
       </header>
 
       <main>
-        <section class="about">
+        <section class="about" id="about">
           <div class="about__card">
             <div class="card__image">
               <img src="assets/images/max-einstein.png" alt="Junaid Siddiqui's Picture" loading="lazy" decoding="async">
@@ -118,14 +118,18 @@
                 for collaboration.
               </div>
               <div class="content__buttons">
-                <div class="btn btn--gradient-pink">Resume <i class="fas fa-file-download"></i></div>
-                <div class="btn btn--gradient-purple">Hire Me! <i class="fas fa-envelope-open-text"></i></div>
+                <a class="btn btn--gradient-pink" style="display: block; text-decoration: none;"
+                  href="https://drive.google.com/file/d/1s1e6pgxE3WQ6-mvMomKW6Vxd5OAPieA-/view?usp=sharing"
+                  target="_blank">Resume <i class="fas fa-file-download"></i></a>
+                <a class="btn btn--gradient-purple" style="display: block; text-decoration: none;"
+                  href="https://www.linkedin.com/in/max-einstein/" target="_blank">Hire Me! <i
+                    class="fas fa-envelope-open-text"></i></a>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="skills">
+        <section class="skills" id="skills">
           <div class="skills__card">
             <div class="skills__card__heading">My Skills</div>
             <div class="skills__card__grid">
@@ -169,7 +173,7 @@
           </div>
         </section>
 
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
           <div class="portfolio__card">
             <div class="portfolio__card__heading">Portfolio</div>
             <div class="portfolio__card__grid">
@@ -182,19 +186,17 @@
                   <div class="description">An ecommerce application for the diagon alley market from the magical world
                     of Harry Potter. Now, you can buy magical items from the comfort of your homes.</div>
                 </div>
-                <div class="options-list">
-                  <ul class="languages">
-                    <li class="language">Python</li>
-                    <li class="language">Django</li>
-                    <li class="language">Bootstrap 4</li>
-                  </ul>
-                  <div class="button-group">
-                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
-                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/diagon-alley"
-                      target="_blank">Github <i class="fab fa-github fa-sm"></i></a>
-                  </div>
+                <ul class="languages">
+                  <li class="language">Python</li>
+                  <li class="language">Django</li>
+                  <li class="language">Bootstrap 4</li>
+                </ul>
+                <div class="button-group">
+                  <a class="btn btn--gradient-pink" href="https://github.com/MAX-EINSTEIN/diagon-alley"
+                    target="_blank">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                  <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/diagon-alley"
+                    target="_blank">Github <i class="fab fa-github fa-sm"></i></a>
                 </div>
-
               </div>
               <div class="project">
                 <img class="project__image webflix" src="assets/images/projects/iconfinder-webflix.svg"
@@ -205,21 +207,21 @@
                   <div class="description">Webflix presents you a curated collection of TV shows from multiple sources.
                     It's the Netflix for the unrecognized but fun web series.</div>
                 </div>
-                <div class="options-list">
-                  <ul class="languages">
-                    <li class="language">Python</li>
-                    <li class="language">Django</li>
-                    <li class="language">HTML</li>
-                    <li class="language">Sass</li>
-                    <li class="language">JS</li>
-                  </ul>
-                  <div class="button-group">
-                    <a class="btn btn--gradient-pink" href="https://webflix.pythonanywhere.com/" target="_blank">Demo <i
-                        class="fas fa-external-link-alt fa-sm"></i></a>
-                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/webflix/"
-                      target="_blank">Github <i class="fab fa-github"></i></a>
-                  </div>
+
+                <ul class="languages">
+                  <li class="language">Python</li>
+                  <li class="language">Django</li>
+                  <li class="language">HTML</li>
+                  <li class="language">Sass</li>
+                  <li class="language">JS</li>
+                </ul>
+                <div class="button-group">
+                  <a class="btn btn--gradient-pink" href="https://webflix.pythonanywhere.com/" target="_blank">Demo <i
+                      class="fas fa-external-link-alt fa-sm"></i></a>
+                  <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/webflix/"
+                    target="_blank">Github <i class="fab fa-github"></i></a>
                 </div>
+
 
               </div>
               <div class="project">
@@ -232,18 +234,19 @@
                     is here for the rescue, it can download songs from youtube using your youtube or spotify playlists.
                   </div>
                 </div>
-                <div class="options-list">
-                  <ul class="languages">
-                    <li class="language">Python</li>
-                    <li class="language">PyQt5</li>
-                    <li class="language">The Qt Framework</li>
-                  </ul>
-                  <div class="button-group">
-                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
-                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/max-music"
-                      target="_blank">Github <i class="fab fa-github"></i></a>
-                  </div>
+
+                <ul class="languages">
+                  <li class="language">Python</li>
+                  <li class="language">PyQt5</li>
+                  <li class="language">The Qt Framework</li>
+                </ul>
+                <div class="button-group">
+                  <a class="btn btn--gradient-pink" href="https://github.com/MAX-EINSTEIN/max-music"
+                    target="_blank">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                  <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/max-music"
+                    target="_blank">Github <i class="fab fa-github"></i></a>
                 </div>
+
 
               </div>
               <div class="project">
@@ -252,21 +255,22 @@
 
                 <div class="details">
                   <div class="title">Files Autopilot</div>
-                  <div class="description">A Python application that automatically manages files
-                    (classifies/operate/move, and more) whenever a change is detected in any of the watched folders.
+                  <div class="description">A Python app that automatically manages files
+                    (classifies, operates on, moves...) whenever a change is detected in any of the watched folders.
                   </div>
                 </div>
-                <div class="options-list">
-                  <ul class="languages">
-                    <li class="language">Python</li>
-                    <li class="language">Async</li>
-                  </ul>
-                  <div class="button-group">
-                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
-                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/files-autopilot"
-                      target="_blank">Github <i class="fab fa-github"></i></a>
-                  </div>
+
+                <ul class="languages">
+                  <li class="language">Python</li>
+                  <li class="language">Async</li>
+                </ul>
+                <div class="button-group">
+                  <a class="btn btn--gradient-pink" href="https://github.com/MAX-EINSTEIN/files-autopilot"
+                    target="_blank">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                  <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/files-autopilot"
+                    target="_blank">Github <i class="fab fa-github"></i></a>
                 </div>
+
 
               </div>
               <div class="project">
@@ -278,18 +282,19 @@
                   <div class="description">It's a keylogger - tracks everything you type and stores the data into files
                     encrypted using base64 encoding with salt encryption.</div>
                 </div>
-                <div class="options-list">
-                  <ul class="languages">
-                    <li class="language">C++</li>
-                    <li class="language">Base 64 encoding</li>
-                    <li class="language">Salt Encryption</li>
-                  </ul>
-                  <div class="button-group">
-                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
-                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/TheKeyInsight"
-                      target="_blank">Github <i class="fab fa-github"></i></a>
-                  </div>
+
+                <ul class="languages">
+                  <li class="language">C++</li>
+                  <li class="language">Base 64 encoding</li>
+                  <li class="language">Salt Encryption</li>
+                </ul>
+                <div class="button-group">
+                  <a class="btn btn--gradient-pink" href="https://github.com/MAX-EINSTEIN/TheKeyInsight"
+                    target="_blank">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                  <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/TheKeyInsight"
+                    target="_blank">Github <i class="fab fa-github"></i></a>
                 </div>
+
 
               </div>
               <div class="project">
@@ -301,19 +306,18 @@
                   <div class="description">Arachnet - Crawls all internal links on a website and applies page ranking
                     algorithms to generate a graph visualization using D3.js</div>
                 </div>
-                <div class="options-list">
-                  <ul class="languages">
-                    <li class="language">Python</li>
-                    <li class="language">Sqlite</li>
-                    <li class="language">d3.js</li>
-                  </ul>
-                  <div class="button-group">
-                    <a class="btn btn--gradient-pink" href="#">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
-                    <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/Arachnet"
-                      target="_blank">Github <i class="fab fa-github"></i></a>
-                  </div>
-                </div>
 
+                <ul class="languages">
+                  <li class="language">Python</li>
+                  <li class="language">Sqlite</li>
+                  <li class="language">d3.js</li>
+                </ul>
+                <div class="button-group">
+                  <a class="btn btn--gradient-pink" href="https://github.com/MAX-EINSTEIN/Arachnet" target="_blank">Demo
+                    <i class="fas fa-external-link-alt fa-sm"></i></a>
+                  <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/Arachnet"
+                    target="_blank">Github <i class="fab fa-github"></i></a>
+                </div>
               </div>
               <div class="project">
                 <img class="project__image interweb" src="assets/images/projects/interweb.png" alt="project image"
@@ -324,17 +328,18 @@
                   <div class="description">An android app to collect and showcase events. It helps to keep track of your
                     life's most important moments and connect with more people with easier event management.</div>
                 </div>
-                <div class="options-list">
-                  <ul class="languages">
-                    <li class="language">Android</li>
-                    <li class="language">Java</li>
-                    <li class="language">Firebase</li>
-                    <li class="language">MVVM</li>
-                  </ul>
-                  <div class="button-group">
-                    <a class="btn btn--gradient-pink">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
-                    <a class="btn btn--gradient-purple">Github <i class="fab fa-github"></i></a>
-                  </div>
+
+                <ul class="languages">
+                  <li class="language">Android</li>
+                  <li class="language">Java</li>
+                  <li class="language">Firebase</li>
+                  <li class="language">MVVM</li>
+                </ul>
+                <div class="button-group">
+                  <a class="btn btn--gradient-pink" href="https://github.com/MAX-EINSTEIN/Inter-Web"
+                    target="_blank">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                  <a class="btn btn--gradient-purple" href="https://github.com/MAX-EINSTEIN/Inter-Web"
+                    target="_blank">Github <i class="fab fa-github"></i></a>
                 </div>
 
               </div>
@@ -347,15 +352,14 @@
                   <div class="description">You are stuck in a recursive maze jail made for containing a single time
                     traveller. Everything feels like Deja-Vu, the jail is a time loop. Can you break the loop?</div>
                 </div>
-                <div class="options-list">
-                  <ul class="languages">
-                    <li class="language">C++</li>
-                    <li class="language">Unreal Engine 4</li>
-                  </ul>
-                  <div class="button-group">
-                    <a class="btn btn--gradient-pink">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
-                    <a class="btn btn--gradient-purple">Github <i class="fab fa-github"></i></a>
-                  </div>
+
+                <ul class="languages">
+                  <li class="language">C++</li>
+                  <li class="language">Unreal Engine 4</li>
+                </ul>
+                <div class="button-group">
+                  <a class="btn btn--gradient-pink">Demo <i class="fas fa-external-link-alt fa-sm"></i></a>
+                  <a class="btn btn--gradient-purple">Github <i class="fab fa-github"></i></a>
                 </div>
 
               </div>
@@ -365,17 +369,18 @@
       </main>
 
       <footer class="footer">
-        <div class="copyright">&copy; 2021 Junaid Siddiqui</div>
+        <div class="copyright">&copy; 2021 &nbsp; Junaid Siddiqui</div>
         <div class="social">
           <div>
-            <a href="https://www.linkedin.com/in/max-einstein/"><i style="color: rgb(10, 102, 194);"
+            <a href="https://www.linkedin.com/in/max-einstein/" target="_blank"><i style="color: rgb(10, 102, 194);"
                 class="fab fa-linkedin fa-3x"></i></a>
           </div>
           <div>
-            <a href="https://github.com/MAX-EINSTEIN"><i class="fab fa-github fa-3x" style="color: black;"></i></a>
+            <a href="https://github.com/MAX-EINSTEIN" target="_blank"><i class="fab fa-github fa-3x"
+                style="color: black;"></i></a>
           </div>
           <div>
-            <a href="https://twitter.com/MAX_EINSTEIN10"><i style="color: rgb(29, 161, 242);"
+            <a href="https://twitter.com/MAX_EINSTEIN10" target="_blank"><i style="color: rgb(29, 161, 242);"
                 class="fab fa-twitter-square fa-3x"></i></a>
           </div>
         </div>
