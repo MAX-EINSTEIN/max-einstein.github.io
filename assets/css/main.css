@@ -559,8 +559,23 @@ body {
   width: 92%;
   padding: 4% 2%;
 }
-.portfolio__card__grid .project .webflix {
+.portfolio__card__grid .project .angello {
+  transform: scale(0.68);
+  background: linear-gradient(to bottom, #08f, #22188f);
+  border-radius: 0.65rem;
+}
+.portfolio__card__grid .project .verify-news {
+  transform: scale(0.82);
+  filter: invert(1);
+}
+.portfolio__card__grid .project .ipec-acm-portal {
   transform: scale(0.72);
+  border-radius: 0.8rem;
+}
+.portfolio__card__grid .project .crystal {
+  transform: scale(0.68);
+  border-radius: 0.8rem;
+  filter: invert(1);
 }
 .portfolio__card__grid .project .autopilot {
   transform: scale(0.8);

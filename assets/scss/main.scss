@@ -578,8 +578,26 @@ body {
                     padding: 4% 2%;
                 }
 
-                .webflix {
+                .angello {
+                    transform: scale(0.68);
+                    background: linear-gradient(to bottom, #08f, #22188f);
+                    border-radius: 0.65rem;
+                }
+
+                .verify-news{
+                    transform: scale(0.82);
+                    filter:invert(1);
+                }
+
+                .ipec-acm-portal {
                     transform: scale(0.72);
+                    border-radius: 0.8rem;
+                }
+
+                .crystal{
+                    transform: scale(0.68);
+                    border-radius: 0.8rem;
+                    filter: invert(1);
                 }
 
                 .autopilot {
